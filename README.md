@@ -1,59 +1,79 @@
-# Frontend
+# Clinivox — Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.2.
+Frontend desenvolvido em Angular para o projeto Clinivox, uma plataforma voltada à gestão de informações de pacientes e consultas clínicas.
 
-## Development server
+## Sobre o projeto
 
-To start a local development server, run:
+O Clinivox busca facilitar a organização de registros clínicos por meio de uma interface simples e intuitiva, integrada a uma API REST desenvolvida em Java com Spring Boot.
 
-```bash
-ng serve
-```
+## Funcionalidades
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Visualização da página inicial.
+- Listagem de pacientes.
+- Cadastro, edição e exclusão de pacientes.
+- Listagem de consultas.
+- Cadastro, edição e exclusão de consultas.
+- Integração com a API REST do backend.
 
-## Code scaffolding
+## Tecnologias utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Angular 22
+- TypeScript
+- HTML5
+- CSS3
+- Java
+- Spring Boot
+- API REST
+- Git e GitHub
 
-```bash
-ng generate component component-name
-```
+## Pré-requisitos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para executar o frontend localmente, é necessário ter o Node.js e o npm instalados.
 
-```bash
-ng generate --help
-```
+O backend Java deve estar configurado e em execução para que as operações de cadastro, consulta, edição e exclusão funcionem.
 
-## Building
+## Como executar o frontend
 
-To build the project run:
+1. Clone este repositório:
 
-```bash
-ng build
-```
+   ```bash
+   git clone https://github.com/RamayannaG/clinivox-fase2.git
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. Entre na pasta do projeto:
 
-## Running unit tests
+   ```bash
+   cd clinivox-fase2/frontend
+   ```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+   Se o repositório já corresponde à pasta do frontend, execute os próximos comandos nessa pasta.
 
-```bash
-ng test
-```
+3. Instale as dependências:
 
-## Running end-to-end tests
+   ```bash
+   npm install
+   ```
 
-For end-to-end (e2e) testing, run:
+4. Inicie a aplicação:
 
-```bash
-ng e2e
-```
+   ```bash
+   npm start
+   ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+5. Acesse no navegador:
 
-## Additional Resources
+   `http://localhost:4200/`
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Endereço da API
+
+O frontend utiliza a API local do backend:
+
+`http://localhost:8080`
+
+## Repositório do backend
+
+[Clinivox API — GitHub](https://github.com/RamayannaG/clinivox-api)
+
+## Projeto acadêmico
+
+Projeto desenvolvido no contexto acadêmico para praticar o desenvolvimento de aplicações web com Angular e a integração com uma API REST.
