@@ -1,0 +1,214 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #243247;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clinivox {
+  min-height: 100vh;
+  background: #f5f8fc;
+}
+
+.topbar {
+  min-height: 88px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5ebf3;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #176b63;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.brand h1 {
+  margin: 0;
+  color: #176b63;
+  font-size: 25px;
+}
+
+.brand p,
+.status,
+.section-heading p,
+.welcome-text {
+  color: #748196;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.status {
+  font-size: 13px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #36a779;
+}
+
+.dashboard {
+  width: min(1100px, 86%);
+  margin: 0 auto;
+  padding: 52px 0 24px;
+}
+
+.welcome {
+  padding: 35px;
+  border-radius: 20px;
+  color: #ffffff;
+  background: linear-gradient(120deg, #176b63, #278b7c);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.welcome h2 {
+  margin: 0;
+  font-size: clamp(27px, 4vw, 38px);
+}
+
+.welcome-text {
+  margin: 12px 0 0;
+  color: #e0f4ef;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.section-heading {
+  margin: 35px 0 20px;
+}
+
+.section-heading h2 {
+  margin: 0 0 7px;
+  font-size: 22px;
+}
+
+.section-heading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.feature-card {
+  padding: 28px;
+  border: 1px solid #e4eaf2;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgb(34 58 86 / 4%);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  font-size: 26px;
+}
+
+.patients-icon {
+  color: #176b63;
+  background: #e2f4ef;
+}
+
+.appointments-icon {
+  color: #536ac5;
+  background: #edf0ff;
+}
+
+.feature-card h3 {
+  margin: 20px 0 9px;
+  font-size: 20px;
+}
+
+.feature-card p {
+  min-height: 42px;
+  color: #748196;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.feature-card button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 0;
+  border-radius: 9px;
+  color: #ffffff;
+  background: #176b63;
+  font-size: 14px;
+}
+
+.feature-card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.feature-card small {
+  display: block;
+  margin-top: 12px;
+  color: #8b96a7;
+  text-align: center;
+}
+
+footer {
+  padding: 36px 0 10px;
+  color: #8b96a7;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard {
+    width: 90%;
+    padding-top: 28px;
+  }
+
+  .welcome {
+    padding: 25px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

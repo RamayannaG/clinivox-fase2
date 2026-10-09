@@ -1,0 +1,118 @@
+
+<section class="pagina-pacientes">
+  <header class="cabecalho">
+    <div>
+      <h1>Pacientes</h1>
+      <p>Gerencie os pacientes cadastrados no Clinivox.</p>
+    </div>
+  </header>
+
+  <p class="mensagem sucesso" *ngIf="mensagem">{{ mensagem }}</p>
+  <p class="mensagem erro" *ngIf="erro">{{ erro }}</p>
+
+  <section class="cartao">
+    <h2>{{ editando ? 'Editar paciente' : 'Cadastrar paciente' }}</h2>
+
+    <form (ngSubmit)="salvar()">
+      <div class="campos">
+        <label>
+          Nome completo
+          <input
+            type="text"
+            name="nome"
+            [(ngModel)]="paciente.nome"
+            placeholder="Digite o nome completo"
+            required
+          />
+        </label>
+
+        <label>
+          CPF
+          <input
+            type="text"
+            name="cpf"
+            [(ngModel)]="paciente.cpf"
+            placeholder="Digite o CPF"
+            required
+          />
+        </label>
+
+        <label>
+          Idade
+          <input
+            type="number"
+            name="idade"
+            [(ngModel)]="paciente.idade"
+            min="1"
+            placeholder="Idade"
+            required
+          />
+        </label>
+      </div>
+
+      <div class="acoes">
+        <button type="submit" class="botao principal">
+          {{ editando ? 'Salvar alterações' : 'Cadastrar paciente' }}
+        </button>
+
+        <button
+          *ngIf="editando"
+          type="button"
+          class="botao secundario"
+          (click)="cancelarEdicao()"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <section class="cartao">
+    <h2>Pacientes cadastrados</h2>
+
+    <div class="tabela-responsiva">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Idade</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of pacientes">
+            <td>{{ item.nome }}</td>
+            <td>{{ item.cpf }}</td>
+            <td>{{ item.idade }}</td>
+            <td class="acoes-tabela">
+              <button
+                type="button"
+                class="botao editar"
+                (click)="editar(item)"
+              >
+                Editar
+              </button>
+
+              <button
+                type="button"
+                class="botao excluir"
+                (click)="excluir(item)"
+              >
+                Excluir
+              </button>
+            </td>
+          </tr>
+
+          <tr *ngIf="pacientes.length === 0">
+            <td colspan="4" class="vazio">
+              Nenhum paciente cadastrado.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>
+

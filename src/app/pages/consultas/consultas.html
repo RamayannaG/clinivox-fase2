@@ -1,0 +1,113 @@
+
+<section class="pagina-consultas">
+  <header class="cabecalho">
+    <div>
+      <p class="eyebrow">GESTÃO CLÍNICA</p>
+      <h1>Consultas</h1>
+      <p>Gerencie os registros das consultas clínicas do Clinivox.</p>
+    </div>
+
+    <a routerLink="/">Voltar ao início</a>
+  </header>
+
+  @if (mensagem) {
+    <div class="mensagem sucesso">{{ mensagem }}</div>
+  }
+
+  @if (erro) {
+    <div class="mensagem erro">{{ erro }}</div>
+  }
+
+  <section class="cartao">
+    <h2>{{ editandoId !== null ? 'Editar consulta' : 'Cadastrar consulta' }}</h2>
+
+    <form (ngSubmit)="salvar()">
+      <div class="campos">
+        <label>
+          Data da consulta
+          <input
+            type="date"
+            name="data"
+            [(ngModel)]="consulta.data"
+            required
+          />
+        </label>
+
+        <label>
+          Descrição
+          <textarea
+            name="descricao"
+            [(ngModel)]="consulta.descricao"
+            placeholder="Descreva a consulta"
+            rows="4"
+            required
+          ></textarea>
+        </label>
+      </div>
+
+      <div class="acoes-formulario">
+        <button type="submit">
+          {{ editandoId !== null ? 'Salvar alterações' : 'Cadastrar consulta' }}
+        </button>
+
+        @if (editandoId !== null) {
+          <button
+            type="button"
+            class="botao-secundario"
+            (click)="limparFormulario()"
+          >
+            Cancelar edição
+          </button>
+        }
+      </div>
+    </form>
+  </section>
+
+  <section class="cartao">
+    <h2>Consultas cadastradas</h2>
+
+    <div class="tabela-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (item of consultas; track item.id) {
+            <tr>
+              <td>{{ item.data }}</td>
+              <td>{{ item.descricao }}</td>
+              <td class="acoes-tabela">
+                <button
+                  type="button"
+                  class="botao-editar"
+                  (click)="editar(item)"
+                >
+                  Editar
+                </button>
+
+                <button
+                  type="button"
+                  class="botao-excluir"
+                  (click)="excluir(item)"
+                >
+                  Excluir
+                </button>
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="3" class="vazio">
+                Nenhuma consulta cadastrada.
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>

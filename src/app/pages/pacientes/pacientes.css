@@ -1,0 +1,168 @@
+
+.pagina-pacientes {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  color: #203b43;
+}
+
+.cabecalho {
+  margin-bottom: 24px;
+}
+
+.cabecalho h1 {
+  margin: 0 0 8px;
+  color: #087e80;
+  font-size: 30px;
+}
+
+.cabecalho p {
+  margin: 0;
+  color: #65777d;
+}
+
+.cartao {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e0e9e9;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(24, 66, 72, 0.06);
+}
+
+.cartao h2 {
+  margin: 0 0 22px;
+  font-size: 20px;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.6fr;
+  gap: 18px;
+}
+
+.campos label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.campos input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbdada;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 400;
+}
+
+.campos input:focus {
+  outline: 2px solid #9bd8d5;
+  border-color: #087e80;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.botao {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.principal {
+  color: white;
+  background: #087e80;
+}
+
+.principal:hover {
+  background: #066568;
+}
+
+.secundario {
+  color: #344e55;
+  background: #eaf0f0;
+}
+
+.tabela-responsiva {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e8eeee;
+}
+
+th {
+  color: #587075;
+  background: #f5f9f9;
+  font-size: 13px;
+}
+
+.acoes-tabela {
+  white-space: nowrap;
+}
+
+.editar {
+  margin-right: 8px;
+  color: #086b73;
+  background: #e1f3f1;
+}
+
+.excluir {
+  color: #a52c37;
+  background: #fdebed;
+}
+
+.vazio {
+  padding: 28px;
+  color: #718187;
+  text-align: center;
+}
+
+.mensagem {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.sucesso {
+  color: #176b43;
+  background: #e6f6ec;
+}
+
+.erro {
+  color: #a52c37;
+  background: #fdebed;
+}
+
+@media (max-width: 700px) {
+  .pagina-pacientes {
+    padding: 16px;
+  }
+
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,175 @@
+
+.pagina-consultas {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  color: #173b3b;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #168b83;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.cabecalho h1 {
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.cabecalho a {
+  color: #087f78;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cartao {
+  background: #ffffff;
+  border: 1px solid #dce9e7;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(20, 70, 65, 0.05);
+}
+
+.cartao h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.campos label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.campos input,
+.campos textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbdcda;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.campos input:focus,
+.campos textarea:focus {
+  outline: 2px solid #168b83;
+  border-color: transparent;
+}
+
+.acoes-formulario {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  background: #087f78;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.botao-secundario {
+  background: #e8efee;
+  color: #173b3b;
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e3ecea;
+  text-align: left;
+}
+
+th {
+  background: #f1f8f7;
+  color: #245653;
+}
+
+.acoes-tabela {
+  display: flex;
+  gap: 8px;
+}
+
+.botao-editar {
+  background: #e4f3f1;
+  color: #087f78;
+}
+
+.botao-excluir {
+  background: #fff0ed;
+  color: #b9382b;
+}
+
+.vazio {
+  padding: 28px;
+  text-align: center;
+  color: #718582;
+}
+
+.mensagem {
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.sucesso {
+  background: #e6f6eb;
+  color: #206b3b;
+}
+
+.erro {
+  background: #fff0ed;
+  color: #a82e24;
+}
+
+@media (max-width: 650px) {
+  .cabecalho {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao {
+    padding: 16px;
+  }
+}
